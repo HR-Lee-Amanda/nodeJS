@@ -7,6 +7,9 @@
 function Person(name, age) {
     this.name = name;
     this.age = age;
+    this.run = function(speed) {
+        console.log(speed*3+" km 속도로 뛰어갑니다.");
+    }
 }
 
 Person.prototype.walk = function(speed) {
@@ -21,3 +24,5 @@ console.dir(person01);
 
 console.log(person01.name + " 객체의 walk(10)을 호출합니다.");
 person01.walk(10);
+console.log(person02.name + " 객체의 run(10)을 호출합니다.");
+person02.run(10);
